@@ -2,8 +2,6 @@
 
 # สรุปรายงานการ Deploy ระบบขึ้น Cloud (Fly.io)
 
-รายงานสรุปขั้นตอนการ Deploy ปัญหาที่พบ และแนวทางการแก้ไข สำหรับโปรเจกต์ Student CRUD Fullstack (React + Express + PostgreSQL/PGlite)
-
 ---
 
 ## 1. ขั้นตอนการ Deploy (ทำอย่างไรบ้าง)
@@ -51,3 +49,10 @@
 | **2** | หน่วยความจำเต็ม (OOM)     | - ปรับขนาดแรมของ VM ใน `fly.toml` จาก `512MB` เป็น `1024MB` (`memory_mb = 1024`)                                                                      |
 | **3** | พอร์ตเซิร์ฟเวอร์ไม่ตรงกัน | - แก้ไข `internal_port = 5000` ใน `fly.toml` ให้ตรงกับพอร์ตของ Express                                                                                |
 | **4** | เข้าโดเมนไม่ได้ (DNS)     | - เข้า Fly.io Dashboard ไปที่เมนู **IP Addresses** แล้วกด **Allocate IPv4 (Shared)** และ **Allocate IPv6** เพื่อเปิดใช้งาน DNS ให้โดเมน               |
+
+
+<img src="picture/1.png" width="750px">
+<img src="picture/2.png" width="750px">
+<img src="picture/3.png" width="750px">
+<img src="picture/5.png" width="750px">
+<img src="picture/4.png" width="750px">
